@@ -1,0 +1,49 @@
+.crouselcomponent{
+    height: 480px;
+    /* background-color: red; */
+    margin: 10px;
+}
+
+.crouselbox{
+    height: 480px;
+    border-radius: 5px;
+}
+
+/* @media  (max-width: '480px'){
+    .crouselcomponent{
+        height: 480px;
+        background-color: yellow;
+    }
+    
+    .crouselbox{
+        height: 480px;
+        border-radius: 10px;
+    }
+} */
+
+
+/* @media screen and (max-width: '768px') and (min-width: '481px'){
+    .crouselcomponent{
+        height: 480px;
+        background-color: blueviolet;
+    }
+    
+    .crouselbox{
+        height: 480px;
+        border-radius: 10px;
+    }
+} */
+
+/* 
+
+@media screen and (min-width: '769px') and (max-width: '992px'){
+    .crouselcomponent{
+        height: 480px;
+        background-color: blue;
+    }
+    
+    .crouselbox{
+        height: 480px;
+        border-radius: 10px;
+    }
+} */
