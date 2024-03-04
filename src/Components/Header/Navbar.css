@@ -54,7 +54,7 @@ header *{
   width: 100vw;
   display: block;
   position: absolute;
-  background-color: #cdc9c9;
+  background-color: #fff;
   z-index: 100;
   margin-top: 0;
   /* margin-left: -15px; */

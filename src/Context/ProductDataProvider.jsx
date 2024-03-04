@@ -62,10 +62,7 @@ const ProductDataProvider = ({ children }) => {
     },
   ];
 
-  // function search(query){
-  //   setSearchQuery(query);
-  // }
-
+ 
   const details = {
     productData,
     Singlecategorys,
