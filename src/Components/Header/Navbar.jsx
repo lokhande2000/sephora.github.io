@@ -50,7 +50,7 @@ const Navbar = () => {
           />
 
           <Flex alignItems={"center"}>
-            <Image src={home} alt="home img" w={"2vw"} h={28} />
+            <Image src='https://www.sephora.com/img/ufe/icons/stores.svg' alt="home img" w={10} />
             <Box ml={10}>
               <Text fontSize={15} fontWeight={500}>
                 Stores & Services
@@ -61,14 +61,14 @@ const Navbar = () => {
 
           <Flex>
             <Center>
-              <Image src={community} alt="comunity img" w={"2vw"} h={28} />
+              <Image src='https://www.sephora.com/img/ufe/icons/community.svg' alt="comunity img" w={10} />
               <Text ml={5}>Community</Text>
             </Center>
           </Flex>
 
           <Flex>
             <Center>
-              <Image src={Face} alt="image" w={"2vw"} h={28} />
+              <Image src="https://www.sephora.com/img/ufe/icons/me.svg" alt="image" w={10} />
               <Box ml={8}>
                 <Text>
                   <Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
           </Box>
 
           <Box>
-            <Image src={Basket} alt="basket img" w={"2vw"} h={28} />
+            <Image src={Basket} alt="basket img" w={10}/>
           </Box>
         </Box>
 
@@ -93,11 +93,11 @@ const Navbar = () => {
           <div className="menu-bar">
             <ul>
               <li className="active">
-                <Link href="">New</Link>
+                <Link to="/products">New</Link>
                 <div className="sub-menu-1">
                   <ul className="dropdown-flex">
                     <li>
-                      <Link to="">
+                      <Link to="/products">
                         <b>All New</b>
                       </Link>
                       <Link to="">Just Dropped</Link>

@@ -5,6 +5,7 @@ export const ContextProductDataProvider = createContext();
 
 const ProductDataProvider = ({ children }) => {
   const [productData, setProductData] = useState([]);
+
   async function fetchProductData() {
     try {
       let res = await axios.get(`http://localhost:8080/products`);
@@ -13,6 +14,8 @@ const ProductDataProvider = ({ children }) => {
       console.log(error);
     }
   }
+
+  
 
   const Singlecategorys = [
     {
@@ -59,13 +62,19 @@ const ProductDataProvider = ({ children }) => {
     },
   ];
 
+  // function search(query){
+  //   setSearchQuery(query);
+  // }
+
   const details = {
     productData,
     Singlecategorys,
+    fetchProductData,
   };
 
   useEffect(() => {
     fetchProductData();
+    
   }, []);
   return (
     <ContextProductDataProvider.Provider value={details}>
