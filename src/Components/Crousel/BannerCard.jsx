@@ -28,7 +28,7 @@ const BannerCard = ({ data }) => {
             left={"15px"}
             
           >
-            <b>SHOP NOW</b>
+            <Link color="#fff">SHOP NOW</Link>
           </Button>
         </Box>
       </Box>

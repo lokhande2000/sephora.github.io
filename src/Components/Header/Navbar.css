@@ -10,6 +10,25 @@ header *{
   /* font-size: 1.2rem; */
 }
 
+.navbox{
+  height: 65px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  /* overflow: hidden; */
+}
+.navbox > div{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbox > div> img{
+  height: 50%;
+}
+
 /* .menu-bar > *{
       padding: 0;
       margin: 0;
@@ -84,4 +103,125 @@ header *{
 }
 .dropdown-flex > li a:hover {
   text-decoration: underline;
+}
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown .dropbtn>a{
+  margin: 0;
+  padding: 0;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #4f4e4e;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 10000;
+}
+
+/* Mega Menu header, if needed */
+.dropdown-content .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.row {
+  /* float: left;
+  width: 33.33%; */
+  display: flex;
+  justify-content: space-around;
+  /* padding: 10px; */
+  overflow-x: hidden;
+  /* background-color: #ccc; */
+  padding: 30px 0;
+  width: 85%;
+  margin: auto;
+  /* height: 250px; */
+}
+
+.sub-menu > a{
+  color: #000;
+  font-weight: 600;
+}
+
+/* Style links inside the columns */
+.column a {
+  float: none;
+  color: black;
+  /* line-height: 10px; */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  padding: 0.4vw;
+}
+
+/* Add a background color on hover */
+.column a:hover {
+  background-color: #ddd;
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#content{
+  /* position: absolute; */
 }
