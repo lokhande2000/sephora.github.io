@@ -60,9 +60,9 @@ const Lipcomponet = () => {
         swipeable
       >
         {productData &&
-          productData.filter((item)=> item.type === 'lip').map((ele) => (
-            <ProductCard key={ele.id} element={ele} />
-          ))}
+          productData
+            .filter((item) => item.type === "lip")
+            .map((ele) => <ProductCard key={ele.id} element={ele} />)}
       </Carousel>
     </div>
   );

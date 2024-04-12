@@ -5,14 +5,18 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import ProductDataProvider from "./Context/ProductDataProvider.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
+import AuthContext from "./Context/AuthContext.jsx";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ProductDataProvider>
-    <BrowserRouter>
-      <ChakraProvider>
-        {/* <React.StrictMode> */}
-        <App />
-        {/* </React.StrictMode> */}
-      </ChakraProvider>
-    </BrowserRouter>
-  </ProductDataProvider>
+  <AuthContext>
+    <ProductDataProvider>
+      <BrowserRouter>
+        <ChakraProvider>
+          {/* <React.StrictMode> */}
+          <App />
+          {/* </React.StrictMode> */}
+        </ChakraProvider>
+      </BrowserRouter>
+    </ProductDataProvider>
+  </AuthContext>
 );
