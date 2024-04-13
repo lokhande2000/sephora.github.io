@@ -8,36 +8,33 @@ const ProductDataProvider = ({ children }) => {
   const [product, setProduct] = useState([]);
   const [productName, setProductName] = useState();
 
+  async function fetchProductData() {
+    try {
+      let res = await axios.get(`http://localhost:8080/products`);
+      setProductData(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   // async function fetchProductData() {
   //   try {
-  //     let res = await axios.get(`http://localhost:8080/products`);
+  //     let url = process.env.API_KEY;
+  //     if (productName) {
+  //       url += `?category=${productName}`;
+  //     }
+  //     let res = await axios.get(url);
   //     setProductData(res.data);
   //   } catch (error) {
   //     console.log(error);
   //   }
   // }
 
-  async function fetchProductData() {
-    try {
-        let url = 'http://localhost:8080/products';
-        if (productName) {
-            url += `?category=${productName}`;
-        }
-        let res = await axios.get(url);
-        setProductData(res.data);
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-
-  function filterdatas(product){
+  function filterdatas(product) {
     // let res = productData.filter(ele=>ele.category == product)
     // setProductData(res)
-    setProductName(product)
-
+    setProductName(product);
   }
-  
 
   const Singlecategorys = [
     {
@@ -84,7 +81,6 @@ const ProductDataProvider = ({ children }) => {
     },
   ];
 
- 
   const details = {
     productData,
     Singlecategorys,
