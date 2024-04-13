@@ -5,16 +5,38 @@ export const ContextProductDataProvider = createContext();
 
 const ProductDataProvider = ({ children }) => {
   const [productData, setProductData] = useState([]);
+  const [product, setProduct] = useState([]);
+  const [productName, setProductName] = useState();
+
+  // async function fetchProductData() {
+  //   try {
+  //     let res = await axios.get(`http://localhost:8080/products`);
+  //     setProductData(res.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   async function fetchProductData() {
     try {
-      let res = await axios.get(`http://localhost:8080/products`);
-      setProductData(res.data);
+        let url = 'http://localhost:8080/products';
+        if (productName) {
+            url += `?category=${productName}`;
+        }
+        let res = await axios.get(url);
+        setProductData(res.data);
     } catch (error) {
-      console.log(error);
+        console.log(error);
     }
-  }
+}
 
+
+  function filterdatas(product){
+    // let res = productData.filter(ele=>ele.category == product)
+    // setProductData(res)
+    setProductName(product)
+
+  }
   
 
   const Singlecategorys = [
@@ -67,12 +89,14 @@ const ProductDataProvider = ({ children }) => {
     productData,
     Singlecategorys,
     fetchProductData,
+    filterdatas,
+    productName,
+    setProduct,
   };
 
   useEffect(() => {
     fetchProductData();
-    
-  }, []);
+  }, [productName]);
   return (
     <ContextProductDataProvider.Provider value={details}>
       {children}

@@ -1,42 +1,61 @@
-import { useReducer } from "react";
+import { useContext, useReducer, useState } from "react";
 import "../style/signin.css";
-import { BiSolidHide } from "react-icons/bi";
-import { Link } from "react-router-dom";
-
-const initial = {
-  email: "",
-  password: "",
-};
-
-const reducer = (state, { type, payload }) => {
-  switch (type) {
-    case "EMAIL": {
-      return {
-        ...state,
-        ...payload,
-      };
-    }`
-    case "PASSWORD": {
-      return {
-        ...state,
-        ...payload,
-      };
-    }
-    default: {
-      return state;
-    }
-  }
-};
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContextProvider } from "../Context/AuthContext";
+import { useToast } from "@chakra-ui/react";
 
 const Signin = () => {
-  const [singleUser, dispatch] = useReducer(reducer, initial);
+  const { userData } = useContext(AuthContextProvider);
 
-  const { email, password } = singleUser;
+  const [signinUser, setSigninUser] = useState({
+    email: "",
+    password: "",
+  });
+
+  const navigateHomePage = useNavigate()
+
+  const toast = useToast()
 
   function matchUserData(e) {
     e.preventDefault();
-    console.log(singleUser);
+    // console.log(signinUser);
+
+
+    if(userData.length == 0) {
+      navigateHomePage("/CreateAccount")
+    }else{
+
+      userData.map((user) => {
+        if (
+          user.email === signinUser.email &&
+          user.password === signinUser.password
+        ) {
+
+          toast({
+              title: "Logged in",
+              description: " Successfully Login",
+              duration: 3000,
+              isClosable: true,
+              status: "success",
+              position: "top",
+              // icon: 
+          })
+           navigateHomePage("/")
+  
+        }else{
+          alert("Please enter the correct username and password");
+        }
+      });
+    }
+
+
+    setSigninUser({
+      email: "",
+      password: "",
+    });
   }
+
+  const { email, password } = signinUser;
 
   return (
     <form onSubmit={matchUserData} className="signiPage">
@@ -55,8 +74,8 @@ const Signin = () => {
           placeholder="Email Address"
           value={email}
           onChange={(e) => {
-            dispatch({
-              type: "EMAIL",
+            setSigninUser({
+              ...signinUser,
               [e.target.name]: e.target.value,
             });
           }}
@@ -67,8 +86,8 @@ const Signin = () => {
           placeholder="Password"
           value={password}
           onChange={(e) => {
-            dispatch({
-              type: "PASSWORD",
+            setSigninUser({
+              ...signinUser,
               [e.target.name]: e.target.value,
             });
           }}

@@ -2,6 +2,7 @@ import React, { useContext, useReducer } from "react";
 import "../style/createAccount.css";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContextProvider } from "../Context/AuthContext";
+import { useToast } from "@chakra-ui/react";
 
 const initialState = {
   firstName: "",
@@ -33,6 +34,7 @@ const CreateAccount = () => {
   const { userData, setUserData } = useContext(AuthContextProvider);
   const [user, dispatch] = useReducer(reducer, initialState);
   const navigate = useNavigate();
+  const toast = useToast()
 
   function handealSubmit(e) {
     e.preventDefault();
@@ -40,7 +42,15 @@ const CreateAccount = () => {
     setUserData([...userData, user]);
 
     dispatch(initialState);
-
+    toast({
+      title: "Create Account Successfully",
+      // description: " Successfully Login",
+      duration: 3000,
+      isClosable: true,
+      status: "success",
+      position: "top",
+      // icon: 
+  })
     navigate("/signin");
   }
 

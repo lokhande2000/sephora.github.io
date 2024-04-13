@@ -93,12 +93,12 @@ const Navbar = () => {
         <div className="navbar">
           <div className="dropdown">
             <button className="dropbtn">
-              <Link to="">New</Link>
+              <Link to="/products">New</Link>
             </button>
             <div className="dropdown-content">
               <div className="row">
                 <div className="column sub-menu">
-                  <Link>All New</Link>
+                  <Link to="/dashboard">All New</Link>
                   <Link to="">Just Dropped</Link>
                   <Link to="">New Makeup</Link>
                   <Link to="">New Skincare</Link>

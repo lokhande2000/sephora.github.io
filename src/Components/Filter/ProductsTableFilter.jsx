@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import { Button, Center, Heading, Input, Text, VStack } from "@chakra-ui/react";
-import { ContextProductDataProvider } from '../../Context/ProductDataProvider'
+import { ContextProductDataProvider } from "../../Context/ProductDataProvider";
 
 const ProductsTableFilter = () => {
+  const { filterdatas } = useContext(ContextProductDataProvider);
 
-    const { fetchProductData } = useContext(ContextProductDataProvider);
+  function handealClickFillterProducts(item) {
+    filterdatas(item);
+  }
 
-    
   return (
     <VStack align="self-start">
       <Text>New</Text>
@@ -14,26 +16,48 @@ const ProductsTableFilter = () => {
         New
       </Heading>
 
-      <VStack align="self-start" m={0} >
-        <button onClick={(e)=>(console.log(e))}>
-          Just Dropped
-        </button>
-        <button >
+      <VStack align="self-start" m={0}>
+        <button>Just Dropped</button>
+        <button
+          onClick={() => {
+            handealClickFillterProducts("makeup");
+          }}
+        >
           Makeup
         </button>
-        <button >
+        <button
+          onClick={() => {
+            handealClickFillterProducts("skincare");
+          }}
+        >
           Skincare
         </button>
-        <button >
+        <button
+          onClick={() => {
+            handealClickFillterProducts("fragrance");
+          }}
+        >
           Fragrance
         </button>
-        <button >
+        <button
+          onClick={() => {
+            handealClickFillterProducts("bath");
+          }}
+        >
           Bath & Body
         </button>
-        <button>
+        <button
+          onClick={() => {
+            handealClickFillterProducts("hair");
+          }}
+        >
           Hair
         </button>
-        <button >
+        <button
+          onClick={() => {
+            handealClickFillterProducts("tools");
+          }}
+        >
           Tools & Brushes
         </button>
       </VStack>
