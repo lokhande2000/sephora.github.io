@@ -11,7 +11,7 @@ const ProductsTable = () => {
       <Box w="20%" >
         <ProductsTableFilter />
       </Box>
-      <SimpleGrid h="full" w="full" columns={4} spacing={2}>
+      <SimpleGrid h="full" w="full" columns={{base:1, sm:2, md:2, lg:3, xl:4}} spacing={2}>
         {productData &&
           productData.map((product) => (
             <ProductsTableCard key={product.id} product={product} />

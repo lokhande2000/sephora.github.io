@@ -466,7 +466,7 @@ const Navbar = () => {
             <button className="dropbtn">
               <Link to="">Hair</Link>
             </button>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="row">
                 <div className="column">
                   <Link to="">
@@ -509,14 +509,14 @@ const Navbar = () => {
                   <Link to=""></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="dropdown">
             <button className="dropbtn">
               <Link to="">Fragrance</Link>
             </button>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="row">
                 <div className="column">
                   <Link to="">
@@ -559,14 +559,14 @@ const Navbar = () => {
                   <Link to=""></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="dropdown">
             <button className="dropbtn">
               <Link to="">Tools & Brushes</Link>
             </button>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="row">
                 <div className="column">
                   <Link to="">
@@ -609,14 +609,14 @@ const Navbar = () => {
                   <Link to=""></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="dropdown">
             <button className="dropbtn">
               <Link to="">Bath & Body</Link>
             </button>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="row">
                 <div className="column">
                   <Link to="">
@@ -659,14 +659,14 @@ const Navbar = () => {
                   <Link to=""></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="dropdown">
             <button className="dropbtn">
               <Link to="">Mini Size</Link>
             </button>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="row">
                 <div className="column">
                   <Link to="">
@@ -709,14 +709,14 @@ const Navbar = () => {
                   <Link to=""></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="dropdown">
             <button className="dropbtn">
               <Link to="">Gifts & Gift Cards</Link>
             </button>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="row">
                 <div className="column">
                   <Link to="">
@@ -759,14 +759,14 @@ const Navbar = () => {
                   <Link to=""></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="dropdown">
             <button className="dropbtn">
               <Link to="">Beauty Under $20</Link>
             </button>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="row">
                 <div className="column">
                   <Link to="">
@@ -809,14 +809,14 @@ const Navbar = () => {
                   <Link to=""></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="dropdown">
             <button className="dropbtn">
               <Link to="">Sale & Offers</Link>
             </button>
-            <div className="dropdown-content">
+            {/* <div className="dropdown-content">
               <div className="row">
                 <div className="column">
                   <Link to="">
@@ -859,7 +859,7 @@ const Navbar = () => {
                   <Link to=""></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>

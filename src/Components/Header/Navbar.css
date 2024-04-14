@@ -1,9 +1,7 @@
-
-header *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+header * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .hoverme:hover {
@@ -12,7 +10,7 @@ header *{
   /* font-size: 1.2rem; */
 }
 
-.navbox{
+.navbox {
   height: 65px;
   width: 90%;
   display: flex;
@@ -21,13 +19,13 @@ header *{
   margin: auto;
   /* overflow: hidden; */
 }
-.navbox > div{
+.navbox > div {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.navbox > div> img{
+.navbox > div > img {
   height: 50%;
 }
 
@@ -107,7 +105,6 @@ header *{
   text-decoration: underline;
 }
 
-
 /* Navbar container */
 .navbar {
   overflow: hidden;
@@ -146,13 +143,14 @@ header *{
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
-.dropdown .dropbtn>a{
+.dropdown .dropbtn > a {
   margin: 0;
   padding: 0;
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   background-color: #4f4e4e;
 }
 
@@ -163,7 +161,7 @@ header *{
   background-color: #fff;
   width: 100%;
   left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 10000;
 }
 
@@ -194,7 +192,7 @@ header *{
   /* height: 250px; */
 }
 
-.sub-menu > a{
+.sub-menu > a {
   color: #000;
   font-weight: 600;
 }
@@ -215,8 +213,6 @@ header *{
   background-color: #ddd;
 }
 
-
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -224,11 +220,16 @@ header *{
   clear: both;
 }
 
-#content{
+#content {
   /* position: absolute; */
 }
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
- 
-}
+  .navbar{
+    background-color: red;
 
+  }
+  .dropbtn > a{
+    border: 1px solid #000;
+  }
+}
