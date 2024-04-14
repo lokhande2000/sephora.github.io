@@ -5,7 +5,7 @@ import { AuthContextProvider } from "../Context/AuthContext";
 import { useToast } from "@chakra-ui/react";
 
 const Signin = () => {
-  const { userData } = useContext(AuthContextProvider);
+  const { userData, setSignin } = useContext(AuthContextProvider);
 
   const [signinUser, setSigninUser] = useState({
     email: "",
@@ -40,6 +40,8 @@ const Signin = () => {
               position: "top",
               // icon: 
           })
+
+          setSignin(true)
            navigateHomePage("/")
   
         }else{

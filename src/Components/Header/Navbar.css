@@ -1,7 +1,9 @@
+
 header *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .hoverme:hover {
@@ -225,3 +227,8 @@ header *{
 #content{
   /* position: absolute; */
 }
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+ 
+}
+

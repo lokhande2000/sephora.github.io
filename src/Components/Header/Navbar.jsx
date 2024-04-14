@@ -6,15 +6,20 @@ import home from "./images/home.jpg";
 import community from "./images/comunity.jpg";
 import Face from "./images/face.jpg";
 import Basket from "../../../public/image.svg";
+import { useContext } from "react";
+import { AuthContextProvider } from "../../Context/AuthContext";
+
 const Navbar = () => {
+  const { userData, setSignin, signin, setUserData } =
+    useContext(AuthContextProvider);
+
+  function signoutUser() {
+    setUserData([]);
+    setSignin(false);
+  }
+
   return (
     <>
-      {/* <Flex gap={15}>
-      <Link to='/'>Home</Link>
-      <Link to='/dashboard'>dashboard</Link>
-      <Link to='/login'>login</Link>
-      <Link to='/signin'>signin</Link>
-    </Flex> */}
       <header>
         <Box _hover={{ textDecoration: "underline" }} p={18} bg={"#FEF1BD"}>
           <Center>
@@ -26,7 +31,7 @@ const Navbar = () => {
         </Box>
 
         <Box className="navbox">
-          <Link to='/' style={{letterSpacing:"10px", fontSize:"25px"}}>
+          <Link to="/" style={{ letterSpacing: "10px", fontSize: "25px" }}>
             SEPHORA
           </Link>
           <Input
@@ -38,7 +43,7 @@ const Navbar = () => {
             placeholder="search"
           />
 
-          <Flex alignItems={"center"}>
+          <Flex id="hide" alignItems={"center"}>
             <Image
               src="https://www.sephora.com/img/ufe/icons/stores.svg"
               alt="home img"
@@ -52,7 +57,7 @@ const Navbar = () => {
             </Box>
           </Flex>
 
-          <Flex>
+          <Flex className="hide">
             <Center>
               <Image
                 src="https://www.sephora.com/img/ufe/icons/community.svg"
@@ -63,7 +68,7 @@ const Navbar = () => {
             </Center>
           </Flex>
 
-          <Flex>
+          <Flex className="hide">
             <Center>
               <Image
                 src="https://www.sephora.com/img/ufe/icons/me.svg"
@@ -72,11 +77,21 @@ const Navbar = () => {
               />
               <Box ml={8}>
                 <Text>
-                  <Link to="/signin">
-                    <b style={{ color: "black" }}>Sign in</b>
-                  </Link>
+                  {signin ? (
+                    <Link onClick={signoutUser} to="">
+                      Signout
+                    </Link>
+                  ) : (
+                    <Link to="/signin">
+                      <b style={{ color: "black" }}>Sign in</b>
+                    </Link>
+                  )}
                 </Text>
-                <Text>for FREE Shipping</Text>
+                {signin ? (
+                  <Text>{userData[0].firstName}</Text>
+                ) : (
+                  <Text>for FREE Shipping</Text>
+                )}
               </Box>
             </Center>
           </Flex>
