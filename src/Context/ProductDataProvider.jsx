@@ -7,6 +7,7 @@ const ProductDataProvider = ({ children }) => {
   const [productData, setProductData] = useState([]);
   const [product, setProduct] = useState([]);
   const [productName, setProductName] = useState();
+  const [order, setOrder] = useState("asc");
 
   // async function fetchProductData() {
   //   try {
@@ -21,7 +22,7 @@ const ProductDataProvider = ({ children }) => {
     try {
       let url = "https://sephoraproductdata.onrender.com/products";
       if (productName) {
-        url += `?category=${productName}`;
+        url += `?_sort=price&_order=${order}&category=${productName}`;
       }
       let res = await axios.get(url);
       setProductData(res.data);
@@ -88,11 +89,14 @@ const ProductDataProvider = ({ children }) => {
     filterdatas,
     productName,
     setProduct,
+    order,
+    setOrder
   };
 
   useEffect(() => {
     fetchProductData();
-  }, [productName]);
+    console.log("order", order);
+  }, [productName, order]);
   return (
     <ContextProductDataProvider.Provider value={details}>
       {children}

@@ -1,9 +1,19 @@
 import { useContext } from "react";
-import { Button, Center, Heading, Input, Text, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  Center,
+  Heading,
+  Input,
+  Select,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { ContextProductDataProvider } from "../../Context/ProductDataProvider";
 
 const ProductsTableFilter = () => {
-  const { filterdatas } = useContext(ContextProductDataProvider);
+  const { filterdatas, order, setOrder } = useContext(
+    ContextProductDataProvider
+  );
 
   function handealClickFillterProducts(item) {
     filterdatas(item);
@@ -60,6 +70,16 @@ const ProductsTableFilter = () => {
         >
           Tools & Brushes
         </button>
+
+        <Select
+          variant="filled"
+          onChange={(e) => {
+            setOrder(e.target.value);
+          }}
+        >
+          <option value="asc">asc</option>
+          <option value="desc">desc</option>
+        </Select>
       </VStack>
     </VStack>
   );

@@ -8,7 +8,7 @@ const ProductsTable = () => {
   const { productData } = useContext(ContextProductDataProvider);
   return (
     <Flex  w="80%" m="auto" >
-      <Box w="20%" >
+      <Box w="25%" >
         <ProductsTableFilter />
       </Box>
       <SimpleGrid h="full" w="full" columns={{base:1, sm:2, md:2, lg:3, xl:4}} spacing={2}>
