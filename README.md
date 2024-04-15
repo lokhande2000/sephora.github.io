@@ -1,7 +1,7 @@
 # Clone of sephora.com
 
 
-This was our project for Construct week at Masai Shcool. Our target was to complete all main functionality of e-commerce website have, such as sing up to till to the byuing of a product. We have completed this project in 5 days.
+This was our project for Construct week at Masai Shcool. Our target was to complete all main functionality of e-commerce website have, such as sing up to till to the byuing of a product. We have completed this project in 8 days.
 
 - [Click here](https://www.sephora.com/) to see the main(Original) website.
 - [Click here](https://sephora-github-io.vercel.app/) to see preview of our project deployment link.
