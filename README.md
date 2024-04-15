@@ -18,3 +18,23 @@ Sephora is a French multinational retailer of personal care and beauty products.
 - npm i react-multi-carousel
 - npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 - npm install react-icons --save
+
+# Home Page
+
+<img src="https://imagetolink.com/ib/y0ATkQQDq5.png" alt="home-page-img">
+
+# Product Page
+<img src="https://imagetolink.com/ib/chTTwQQDYh.png" alt="product-page-img" >
+
+# Create Account Page
+<img src="https://imagetolink.com/ib/SDGEEHFaqP.png" alt="create-account-page-img" >
+
+# Signin Page
+<img src="https://imagetolink.com/ib/Q7ABpeSlqW.png" alt="signint-page-img" >
+
+# Footer
+<img src="https://imagetolink.com/ib/82Poc4NfAr.png" alt="footer-page-img" >
+
+
+
+
